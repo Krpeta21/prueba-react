@@ -1,15 +1,13 @@
-import "./App.css";
-import { useCatImage } from "./services/hooks/useCatImage";
-import { useCatFact } from "./services/hooks/useCatFact";
+import './App.css'
+import { useCatImage } from './services/hooks/useCatImage'
+import { useCatFact } from './services/hooks/useCatFact'
 
-
-export function App() {
-  const {fact, refreshFact} = useCatFact()
-  const {imageUrl} = useCatImage({ fact }) 
+export function App () {
+  const { fact, refreshFact } = useCatFact()
+  const { imageUrl } = useCatImage({ fact })
   const handleClick = async () => {
-    refreshFact();
-  };
-  
+    refreshFact()
+  }
   return (
     <main>
       <h1>App de gatitos</h1>
@@ -24,5 +22,5 @@ export function App() {
         )}
       </section>
     </main>
-  );
+  )
 }
